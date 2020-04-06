@@ -1,0 +1,64 @@
+
+form {
+    background-color: var(--blueDark);
+    padding: 2rem;
+    border-radius: 1.5rem;
+
+}
+
+@media only screen and (min-width: 48em) {
+    form {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .form-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .field {
+        flex: 0 0 calc(50% - 1rem);
+    }
+
+}
+
+.field {
+   display: flex;
+   margin-bottom: 1rem;
+   align-items: center;
+}
+
+
+.field label {
+    flex: 0 0 9rem;
+    color: var(--white);
+ }
+
+ .field input[type="text"],
+ .field input[type="tel"],
+ .field input[type="email"],
+ .field input[type="password"],
+ .field textarea{
+     flex: 1;
+    height: 2.6rem;
+ }
+
+ .w-100{
+     flex: 0 0 100%;
+ }
+
+ .field textarea{
+   height: 4rem;
+}
+
+.submit-form{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.form--p{
+    background-color: var(--blueDarker);
+    border-radius: 15px;
+}
