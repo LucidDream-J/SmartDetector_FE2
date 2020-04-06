@@ -114,7 +114,7 @@ class App extends Component {
     let newmodel = this.state.model;
     console.log(newmodel);
 
-    fetch("http://localhost:3000/imageUrl", {
+    fetch("https://peaceful-brushlands-49140.herokuapp.com/imageUrl", {
       method: "post",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -129,7 +129,7 @@ class App extends Component {
             +" " + response.outputs[0].data.regions[0].region_info.bounding_box
           );
 
-          fetch("http://localhost:3000/image", {
+          fetch("https://peaceful-brushlands-49140.herokuapp.com/image", {
             method: "put",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
