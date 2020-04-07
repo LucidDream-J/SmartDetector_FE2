@@ -23,8 +23,8 @@ class Register extends React.Component {
   };
 
   onSubmitRegister = () => {
-    console.log(this.state);
-    console.log("register all good 1");
+    // console.log(this.state);
+
     fetch("https://peaceful-brushlands-49140.herokuapp.com/register", {
       method: "post",
       headers: { "Content-Type": "application/json" },
@@ -34,18 +34,17 @@ class Register extends React.Component {
         name: this.state.registerName
       })
     })
-      .then(response => console.log(response.json()))
+      .then(response => response.json())
       .then(userdata => {
         if (userdata.id) {
           this.props.loadUser(userdata);
           console.log(userdata);
-          this.props.onRouteChange('home');
+          this.props.onRouteChange("home");
         }
       });
   };
 
   render() {
-    
     return (
       <section id="register">
         <h2>Registration</h2>
